@@ -1,0 +1,21 @@
+﻿@model List<Personne>
+@{
+    ViewData["Title"] = "DisplayPersonne";
+}
+
+<div>
+    <h1>Liste de personnes</h1>
+    @foreach (Personne p in Model)
+
+    @*@foreach(Personne p in ViewData["listePersonnes"] as List<Personne>)*@
+
+    @*@foreach(Personne p in ViewBag.listePersonnes)*@
+    {
+            <div class=row>
+                <div class="col">@p.Nom</div>
+                <div class="col">@p.Prenom</div>
+                <div class="col"><a asp-controller="Personne" asp-action="Details" asp-route-id='@p.Id'>Détail</a></div>
+            </div>
+    }
+
+</div>

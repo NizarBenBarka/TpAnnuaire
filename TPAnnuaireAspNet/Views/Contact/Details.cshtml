@@ -1,0 +1,19 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h1>Détail du contact</h1>
+    @foreach (Contact c in Model)
+
+    @*@foreach(Personne p in ViewData["listePersonnes"] as List<Personne>)*@
+    @*@foreach(Personne p in ViewBag.listePersonnes)*@
+    {
+            <div class=row>
+                <div class="col">@c.LastName</div>
+                <div class="col">@c.FirstName</div>
+                <div class="col">@c.Phone</div>
+            </div>
+    }
+</div>

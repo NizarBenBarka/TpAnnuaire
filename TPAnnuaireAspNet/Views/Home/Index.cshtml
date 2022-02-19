@@ -1,0 +1,57 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Accueil Annuaire</h1>
+
+@*    <div class="row">
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Telephone</th>
+            </tr>*@
+
+           @foreach (Contact c in Model)
+            {
+                <tr>
+                    <td><div class="col">@c.Id</div></td>
+                    <td><div class="col">@c.FirstName</div></td>
+                    <td><div class="col">@c.LastName</div></td>
+                    <td><div class="col">@c.Phone</div></td>
+                </tr>
+            }
+    @*      
+            
+            
+@model List<Contact>
+@{
+ViewData["Title"] = "Accueil Annuaire";
+}<div class=row>
+@foreach (Contact ctact in Model)
+{
+<div class="col">@ctact.Id</div>
+<div class="col">@ctact.FirstName</div>
+<div class="col">@ctact.LastName</div>
+<div class="col">@ctact.Phone</div>
+}
+</div>
+
+
+            
+            
+            
+            
+            
+            
+            
+            *@
+
+        </table>
+    </div>
+
+
+</div>

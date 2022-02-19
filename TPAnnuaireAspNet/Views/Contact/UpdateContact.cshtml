@@ -1,0 +1,41 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "UpdateContact";
+}
+
+<div>
+    <h1>Modifier un contact</h1>
+
+    <form enctype="multipart/form-data" asp-controller="Contact" asp-action="UpdateContact" method="post">
+        @foreach (Contact c in Model)
+        {
+        <div class="row m-1">
+            <input type="text" name="FirstName" class="form-control col p-1" placeholder=@c.FirstName />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="LastName" class="form-control col p-1" placeholder=@c.LastName />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="Phone" class="form-control col p-1" required placeholder=@c.Phone />
+        </div>
+        <div class="row m-1">
+            <button class="col btn btn-dark" type="submit">Modifier</button>
+        </div>
+        }
+    </form>
+
+    @*    <form enctype="multipart/form-data" asp-controller="Contact" asp-action="UpdateContact" method="post">
+        @foreach (Contact c in Model)
+        {
+        <div class=row>
+        <div class="col">@c.FirstName</div>
+        <div class="col"></div>
+        <div class="col">@c.Phone</div>
+        <div class="row m-1">
+        <button class="col btn btn-dark" type="submit">Valider</button>
+        </div>
+        </div>
+        }
+        </form>*@
+
+</div>

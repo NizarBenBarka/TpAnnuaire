@@ -1,0 +1,18 @@
+﻿@model List<Personne>
+@{
+ViewData["Title"] = "Liste de Personnes";
+}
+
+<div>
+<h1>Liste de personnes</h1>
+@foreach (Personne p in Model)
+{
+<div class=row>
+<div class="col">@p.Id</div>
+<div class="col">@p.Nom</div>
+<div class="col">@p.Prenom</div>
+<div class="col">@p.Telephone</div>
+</div>
+}
+
+</div>
